@@ -10,7 +10,7 @@ const DashBoard = () => {
   // Function to fetch all users
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/users/", {
+      const response = await fetch("https://student-app-backend-nine.vercel.app/api/v1/users/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
