@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import userImage from "./assets/UserPhoto.jpg";
-import Logo from "./assets/IMG_2014.jpeg";
+import Logo from "./assets/Logo.png";
 
 const DashBoard = () => {
   const [users, setUsers] = useState([]); // State to store user data

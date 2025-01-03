@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import "./index.css";
-import Logo from "./assets/IMG_2014.jpeg";
+import Logo from "./assets/Logo.png";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -48,13 +48,13 @@ const Login = () => {
 
     return (
         <>
-            <div>
-                <img src={Logo} alt="User" className="w-[170px] h-15 rounded-full object-cover" />
+            <div className="flex items-end justify-end relative  rtl w-full h-[70px] bg-[rgba(68,116,124,1)]">
+                <img src={Logo} alt="User" className="w-[200px] h-18 object-cover  bg-[rgba(68,116,124,1)] absolute top-0  " />
             </div>
-            <div className="h-[450px] flex items-center justify-center mt-[70px] rtl">
+            <div className="h-[450px] flex items-center justify-center mt-[20px] rtl">
                 <div className="p-6 max-w-lg w-full">
-                    <h2 className="text-3xl font-bold text-center text-[#254466] mb-5">Login</h2>
-                    <p className="text-gray-400 p-2">Please enter your details to login.</p>
+                    <h2 className="text-3xl font-bold text-center text-[rgba(68,116,124,1)]  mb-5">تسجيل دخول</h2>
+                    <p className="text-gray-400 p-2">برجاء ادخال بيانات الصحيحه</p>
 
                     {error && <p className="text-red-500 text-center">{error}</p>}
 
@@ -65,7 +65,7 @@ const Login = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
-                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors"
+                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)]  transition-colors"
                                 placeholder="Email"
                             />
                         </div>
@@ -76,16 +76,16 @@ const Login = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 type="password"
-                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors"
+                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)]  transition-colors"
                                 placeholder="Password"
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-[#1A76D1] text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[#1A76D1] transition duration-300 ease-in-out"
+                            className="w-full bg-[rgba(68,116,124,1)]  text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[rgba(68,116,124,1)]  transition duration-300 ease-in-out"
                         >
-                            Login
+                            تسجيل الدخول
                         </button>
                     </form>
                 </div>
