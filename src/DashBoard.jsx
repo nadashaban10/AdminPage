@@ -65,9 +65,9 @@ const DashBoard = () => {
 
   return (
     <div className="p-4">
-      <div className="flex justify-start mb-6">
-        <img src={Logo} alt="User" className="w-[170px] h-15 rounded-full object-cover" />
-      </div>
+       <div className="flex items-end justify-end relative  rtl w-full h-[70px] bg-[rgba(68,116,124,1)]">
+                      <img src={Logo} alt="User" className="w-[200px] h-18 object-cover  bg-[rgba(68,116,124,1)] absolute top-0  " />
+                  </div>
       {/* Page Header */}
       <h1 className="text-2xl font-bold text-gray-800 mb-4 ml-4">User Management</h1>
 
