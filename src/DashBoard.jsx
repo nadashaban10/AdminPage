@@ -10,7 +10,7 @@ const DashBoard = () => {
   // Function to fetch all users
   const fetchUsers = async () => {
     try {
-      const response = await fetch("https://student-app-backend-nine.vercel.app/api/v1/users/", {
+      const response = await fetch("https://student-app-backend-mu.vercel.app/api/v1/users/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const DashBoard = () => {
   // Function to delete a user
   const deleteUser = async (email) => {
     try {
-      const response = await fetch(`https://student-app-backend-nine.vercel.app/api/v1/users/${email}`, {
+      const response = await fetch(`https://student-app-backend-mu.vercel.app/api/v1/users/${email}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

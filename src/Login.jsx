@@ -12,7 +12,7 @@ const Login = () => {
 
     const fetchLoginUser = async (email) => {
         try {
-            const response = await fetch(`https://student-app-backend-nine.vercel.app/api/v1/admins/isadmin?email=${encodeURIComponent(email)}`, {
+            const response = await fetch(`https://student-app-backend-mu.vercel.app/api/v1/admins/isadmin?email=${encodeURIComponent(email)}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
