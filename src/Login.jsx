@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import "./index.css";
@@ -25,16 +25,14 @@ const Login = () => {
                     localStorage.setItem('user', JSON.stringify(data));
                     return data;
                 } else {
-                    setError('You are not authorized to access this page.');
+                    setError('غير مصرح لك بالدخول إلى هذه الصفحة.');
                     return null;
                 }
             } else {
-                console.error('Login failed:', data.errors || data.message);
                 setError(data.errors || data.message);
             }
         } catch (error) {
-            console.error('Error during login:', error);
-            setError('Error during login. Please try again.');
+            setError('حدث خطأ أثناء تسجيل الدخول. حاول مرة أخرى.');
         }
     };
 
@@ -48,13 +46,13 @@ const Login = () => {
 
     return (
         <>
-            <div className="flex items-end justify-end relative  rtl w-full h-[70px] bg-[rgba(68,116,124,1)]">
-                <img src={Logo} alt="User" className="w-[200px] h-18 object-cover  bg-[rgba(68,116,124,1)] absolute top-0  " />
+            <div className="flex items-end justify-end relative rtl w-full h-[70px] bg-[rgba(68,116,124,1)]">
+                <img src={Logo} alt="الشعار" className="w-[200px] h-18 object-cover bg-[rgba(68,116,124,1)] absolute top-0" />
             </div>
             <div className="h-[450px] flex items-center justify-center mt-[20px] rtl">
                 <div className="p-6 max-w-lg w-full">
-                    <h2 className="text-3xl font-bold text-center text-[rgba(68,116,124,1)]  mb-5">تسجيل دخول</h2>
-                    <p className="text-gray-400 p-2">برجاء ادخال بيانات الصحيحه</p>
+                    <h2 className="text-3xl font-bold text-center text-[rgba(68,116,124,1)] mb-5">تسجيل دخول</h2>
+                    <p className="text-gray-400 p-2">برجاء إدخال البيانات الصحيحة</p>
 
                     {error && <p className="text-red-500 text-center">{error}</p>}
 
@@ -65,8 +63,8 @@ const Login = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
-                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)]  transition-colors"
-                                placeholder="Email"
+                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)] transition-colors"
+                                placeholder="البريد الإلكتروني"
                             />
                         </div>
 
@@ -76,14 +74,14 @@ const Login = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 type="password"
-                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)]  transition-colors"
-                                placeholder="Password"
+                                className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(68,116,124,1)] transition-colors"
+                                placeholder="كلمة المرور"
                             />
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-[rgba(68,116,124,1)]  text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[rgba(68,116,124,1)]  transition duration-300 ease-in-out"
+                            className="w-full bg-[rgba(68,116,124,1)] text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[rgba(68,116,124,1)] transition duration-300 ease-in-out"
                         >
                             تسجيل الدخول
                         </button>
